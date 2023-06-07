@@ -1,4 +1,66 @@
 body {
 	font-family: "Cairo", sans-serif;
 	font-family: "Poppins", sans-serif;
+	background-color: #eee !important;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+body .container {
+	min-height: 100vh;
+}
+form {
+	background-color: white;
+	padding: 45px 52px;
+	border-radius: 16px;
+	border-bottom-right-radius: 16px;
+	border-bottom-right-radius: 50%;
+}
+form .header {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 40px;
+}
+form .header .custom-input {
+	margin-right: 20px;
+}
+form .header input {
+	padding: 7px 15px;
+	width: 113px;
+	outline: none;
+	border: 2px solid #eee;
+	border-radius: 6px;
+	font-weight: bold;
+	font-size: 23px;
+}
+form .header input::placeholder {
+	transition: all 0.5s ease-in-out;
+	opacity: 1;
+	color: gray;
+}
+form .header input:focus::placeholder {
+	opacity: 0;
+}
+form .header h2 {
+	font-size: 16px;
+	color: gray;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.submit {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	color: white;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(0, 100%, 67%);
+	bottom: -30px;
+	right: 0;
 }
