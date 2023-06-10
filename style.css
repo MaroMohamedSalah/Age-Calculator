@@ -1,7 +1,16 @@
+:root {
+	--color-one: hsl(259, 100%, 65%);
+	--bg-color: hsl(0, 0%, 86%);
+	--black-color: hsl(0, 0%, 8%);
+	--error-color: hsl(0, 100%, 67%);
+
+	--main-transition: 0.3s;
+}
+
 body {
 	font-family: "Cairo", sans-serif;
 	font-family: "Poppins", sans-serif;
-	background-color: #eee !important;
+	background-color: var(--bg-color) !important;
 }
 a {
 	text-decoration: none;
@@ -11,17 +20,18 @@ body .container {
 	min-height: 100vh;
 }
 form {
+	min-width: 50%;
 	background-color: white;
 	padding: 45px 52px;
 	border-radius: 16px;
 	border-bottom-right-radius: 16px;
-	border-bottom-right-radius: 50%;
+	border-bottom-right-radius: 25%;
 }
 form .header {
 	display: flex;
 	justify-content: start;
 	align-items: center;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--bg-color);
 	padding-bottom: 40px;
 }
 form .header .custom-input {
@@ -29,20 +39,33 @@ form .header .custom-input {
 }
 form .header input {
 	padding: 7px 15px;
-	width: 113px;
+	width: 130px;
 	outline: none;
-	border: 2px solid #eee;
+	border: 1.5px solid var(--bg-color);
 	border-radius: 6px;
 	font-weight: bold;
 	font-size: 23px;
+	transition: all var(--main-transition) ease-in-out;
+}
+form .header .error {
+	opacity: 0;
+	transition: all var(--main-transition) ease-in-out;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 13px;
+	color: var(--error-color);
 }
 form .header input::placeholder {
-	transition: all 0.5s ease-in-out;
+	transition: all var(--main-transition) ease-in-out;
 	opacity: 1;
 	color: gray;
 }
 form .header input:focus::placeholder {
 	opacity: 0;
+}
+form .header input:focus,
+form .header input:hover {
+	border-color: var(--color-one);
 }
 form .header h2 {
 	font-size: 16px;
@@ -50,17 +73,36 @@ form .header h2 {
 	font-weight: bold;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	transition: all var(--main-transition) ease-in-out;
 }
 .submit {
-	width: 60px;
-	height: 60px;
+	width: 75px;
+	height: 75px;
 	border-radius: 50%;
 	color: white;
-	font-size: 20px;
+	font-size: 35px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: hsl(0, 100%, 67%);
+	background-color: var(--color-one);
 	bottom: -30px;
 	right: 0;
+	transition: all var(--main-transition) ease-in-out;
+	border: none;
+}
+.submit:hover {
+	background-color: var(--black-color);
+}
+form .result .item {
+	display: flex;
+}
+form .result .item h2 {
+	font-size: 85px;
+	font-weight: bold;
+	color: var(--black-color);
+}
+form .result .item h2:nth-of-type(1) {
+	color: var(--color-one);
+	font-style: italic;
+	letter-spacing: 8px;
 }
