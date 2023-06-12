@@ -34,8 +34,10 @@ form.onsubmit = (event) => {
 				hasError = true; // Set the flag to true if there is an error
 				return; // Exit the loop for this input
 			}
-			if (input.name === "year" && value > getCurrentYear())
+			if (input.name === "year" && value > getCurrentYear()) {
 				setError(input, "Must be in the past");
+				hasError = true;
+			}
 		}
 	});
 
