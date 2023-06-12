@@ -141,6 +141,7 @@ form .result .item h2:nth-of-type(1) {
 	}
 	form .header input {
 		width: 100%;
+		padding: 6px 9px;
 	}
 	form .header .error {
 		font-size: 12px;
