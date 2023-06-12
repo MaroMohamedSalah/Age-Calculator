@@ -138,6 +138,10 @@ const setRes = (yearInput, monthInput, dayInput) => {
 	}
 
 	yearsRes.textContent = years;
+	// data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300"
+	yearsRes.setAttribute("data-aos", "fade-up");
+	yearsRes.setAttribute("data-aos-anchor-placement", "top-bottom");
+	yearsRes.setAttribute("data-aos-delay", "300");
 	monthsRes.textContent = months;
 	daysRes.textContent = days;
 };
