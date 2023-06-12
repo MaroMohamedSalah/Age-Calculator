@@ -90,6 +90,11 @@ form .header h2 {
 	transition: all var(--main-transition) ease-in-out;
 	border: none;
 }
+.submit:hover i {
+	animation: fadeInDown;
+	animation-delay: 0.5s;
+	animation-duration: 1s;
+}
 .submit:hover {
 	background-color: var(--black-color);
 }
