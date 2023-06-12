@@ -144,3 +144,5 @@ const setRes = (yearInput, monthInput, dayInput) => {
 function daysInMonth(month, year) {
 	return new Date(year, month, 0).getDate();
 }
+
+AOS.init();

@@ -22,6 +22,9 @@
   <!-- animation.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <!-- add AOS animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- add bootstrap -->
   <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,7 +37,7 @@
   <div class="container d-flex justify-content-center align-items-center">
     <form class="shadow my-form" action="/" method="POST">
       <div class="header position-relative">
-        <div class="custom-input">
+        <div class="custom-input" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <h2>
             Day
           </h2>
@@ -43,7 +46,7 @@
             error
           </h6>
         </div>
-        <div class="custom-input">
+        <div class="custom-input" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
           <h2>
             Month
           </h2>
@@ -52,7 +55,7 @@
             This Feild is requird
           </h6>
         </div>
-        <div class="custom-input">
+        <div class="custom-input" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
           <h2>
             Year
           </h2>
@@ -61,24 +64,24 @@
             error
           </h6>
         </div>
-        <button type="submit" class="submit position-absolute">
+        <button type="submit" class="submit position-absolute" data-aos="flip-down">
           <i class="fa-solid fa-arrow-down"></i>
         </button>
       </div>
       <div class="result py-5">
-        <div class="item">
+        <div class="item" data-aos="fade-up-right">
           <h2 id="years-res" class="me-2">--</h2>
           <h2>
             years
           </h2>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up-left">
           <h2 id="months-res" class="me-2">--</h2>
           <h2>
             months
           </h2>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up-right">
           <h2 id="days-res" class="me-2">--</h2>
           <h2>
             days
@@ -98,6 +101,9 @@
 
   <!-- Bootstrap -->
   <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- JS -->
   <script src="./script.js"></script>
